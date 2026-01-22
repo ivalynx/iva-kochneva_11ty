@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ custom_global_css }}">
     {% if custom_css %}
     <link rel="stylesheet" href="{{ custom_css }}">
     {% endif %}
+    <title>{{ title }}</title>
 </head>
 <body>
     {% include "header.njk" %}
