@@ -1,0 +1,4 @@
+{
+  "lang": "bg",
+  "permalink": "{% if page.fileSlug == 'index' %}/{% else %}/{{ page.fileSlug }}/{% endif %}"
+}
