@@ -1,0 +1,35 @@
+<header>
+    <nav>
+        <ul class="main-menu">
+            <li><a href="{{ "/" | locale_url }}">Главная</a></li>
+            <li><a href="{{ "/websites/" | locale_url }}">Websites</a></li>
+            <li><a href="{{ "/embroidery/" | locale_url }}">Embroidery</a></li>
+            <li><a href="{{ "/art/" | locale_url }}">Art</a></li>
+        </ul>
+
+        <ul class="lang-switcher">
+            {# Ссылка на болгарскую версию текущей страницы #}
+            <li>
+                <a href="{{ page.url | locale_url('bg') }}" 
+                   class="{% if lang == 'bg' %}active{% endif %}"
+                   lang="bg">BG</a>
+            </li>
+
+            {# Ссылка на русскую версию текущей страницы #}
+            <li>
+                <a href="{{ page.url | locale_url('ru') }}" 
+                   class="{% if lang == 'ru' %}active{% endif %}"
+                   lang="ru">RU</a>
+            </li>
+
+            {# Ссылка на английскую версию текущей страницы #}
+            <li>
+                <a href="{{ page.url | locale_url('en') }}" 
+                   class="{% if lang == 'en' %}active{% endif %}"
+                   lang="en">EN</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Если названия файлов будут разными, плагину потребуется дополнительная подсказка в Front Matter через переменную translationKey, но при одинаковых именах всё работает «из коробки». -->
