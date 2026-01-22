@@ -1,0 +1,23 @@
+---
+layout: base.njk
+---
+<div class="error-page">
+    <h1>{{ error_title }}</h1>
+    <p>{{ error_message }}</p>
+    <a href="{{ "/" | locale_url }}">{{ back_to_home_label }}</a>
+</div>
+
+{# Скрипт только для корневой страницы 404, чтобы перенаправить на нужный язык #}
+{% if lang == 'bg' %}
+<script>
+    // Если пользователь зашел на /en/что-то-несуществующее, 
+    // хостинг покажет корень /404.html. 
+    // Этот скрипт проверит URL и перекинет на /en/404.html
+    const path = window.location.pathname;
+    if (path.startsWith('/en/')) {
+        window.location.href = '/en/404.html';
+    } else if (path.startsWith('/ru/')) {
+        window.location.href = '/ru/404.html';
+    }
+</script>
+{% endif %}

@@ -6,6 +6,17 @@ module.exports = function(eleventyConfig) {
     defaultLanguage: "bg", // Язык по умолчанию
     errorMode: "allow-fallback" // Если перевод отсутствует, можно показать дефолтную страницу
   });
+  eleventyConfig.setBrowserSyncConfig({
+    callbacks: {
+      ready: function(err, bs) {
+        const content_404 = require('fs').readFileSync('_site/404.html');
+        bs.addMiddleware("*", (req, res) => {
+          res.write(content_404);
+          res.end();
+        });
+      }
+    }
+  });
 
   return {
     dir: {
