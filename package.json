@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:build": "sass src/assets/scss/style.scss _site/assets/css/style.css --style=compressed --no-source-map",
+    "sass:watch": "sass src/assets/scss/style.scss _site/assets/css/style.css --watch",
+    "start": "npm-run-all --parallel sass:watch eleventy:serve",
+    "build": "sass src/assets/scss/style.scss _site/assets/css/style.css && npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
@@ -19,6 +23,7 @@
   "homepage": "https://github.com/ivalynx/iva-kochneva_11ty#readme",
   "type": "module",
   "dependencies": {
-    "@11ty/eleventy": "^3.1.2"
+    "@11ty/eleventy": "^3.1.2",
+    "sass": "^1.97.3"
   }
 }
