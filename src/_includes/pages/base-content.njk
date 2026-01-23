@@ -1,0 +1,16 @@
+---
+layout: base.njk
+---
+<article class="standard-page">
+    <div class="container">
+        {# Если в .md файле задан page_title, выводим его как H1 #}
+        {% if page_title %}
+            <h1>{{ page_title }}</h1>
+        {% endif %}
+
+        {# Вывод основного содержимого из Markdown-файла #}
+        <div class="page-body">
+            {{ content | safe }}
+        </div>
+    </div>
+</article>
