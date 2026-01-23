@@ -1,9 +1,8 @@
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
 
 module.exports = function(eleventyConfig) {
-  // Подключаем плагин интернационализации
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
-    defaultLanguage: "bg", // Язык по умолчанию
+    defaultLanguage: "bg",
     errorMode: "allow-fallback" // Если перевод отсутствует, можно показать дефолтную страницу
   });
   eleventyConfig.setBrowserSyncConfig({
@@ -17,6 +16,7 @@ module.exports = function(eleventyConfig) {
       }
     }
   });
+  eleventyConfig.addPassthroughCopy({ "src/assets/favicon": "/" });
 
   return {
     dir: {
