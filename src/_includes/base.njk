@@ -25,16 +25,9 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    {% if lang == 'ru' %}
-        <link rel="manifest" href="/ru/manifest.json">
-        <link rel="manifest" href="/ru/manifest.webmanifest">
-    {% elif lang == 'en' %}
-        <link rel="manifest" href="/en/manifest.json">
-        <link rel="manifest" href="/en/manifest.webmanifest">
-    {% else %}        
-        <link rel="manifest" href="manifest.json">
-        <link rel="manifest" href="/manifest.webmanifest">
-    {% endif %}
+    <link rel="manifest" href="{% if lang == 'bg' %}/manifest.json{% else %}/{{ lang }}/manifest.json{% endif %}">
+    <link rel="manifest" href="{% if lang == 'bg' %}/manifest.webmanifest{% else %}/{{ lang }}/manifest.webmanifest{% endif %}">
+
 </head>
 <body>
     {% include "header.njk" %}
