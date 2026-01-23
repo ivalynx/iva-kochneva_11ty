@@ -1,0 +1,26 @@
+/* Colors */
+$white: #ffffff;
+$whiteOpacity85: rgba(255, 255, 255, 0.85); // a white:hover, input border
+$whiteOpacity70: rgba(255, 255, 255, 0.7);  // a white:active, slider bg
+$whiteOpacity60: rgba(255, 255, 255, 0.6);  // a white:focus
+$black: #101010;
+$blackOpacity85: rgba(16, 16, 16, 0.85);
+$blackOpacity70: rgba(16, 16, 16, 0.7);
+$blackOpacity60: rgba(16, 16, 16, 0.6);
+
+/* Fonts */
+$titleFontFamily: 'Roboto Slab', "Palatino Linotype", "Georgia", "Garamond", "Bookman Old Style", serif;
+$fontSizeLogo: 1.8em;
+$fontSizeTitle2: 1.4em;
+$fontSizeTitle3: 1.2em;
+$fontSizeTitle4: 1em;
+$fontSizeSmall: 0.8em;
+$lineHeight-standart: 120%;
+$lineHeight-incr: 175%;
+
+/* Breakpoints */
+$small-phone: 320px;
+$phone: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1200px;

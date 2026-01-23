@@ -1,0 +1,24 @@
+.about-me {
+  display: flex;
+  align-items: center;
+}
+.about-me__photo {
+  flex-shrink: 1;
+  @include for-size(phone) {
+    display: none;
+  }
+  @include for-size(devices) {
+    width: 100px;
+    height: 100px;
+    margin-right: 1.5em;
+  }
+  @include for-size(laptop) {
+    width: 200px;
+    height: 200px;
+    margin-right: 3em;
+  }
+}
+.about-me__text {
+  // font-size: 125%;
+  // line-height: 175%;
+}

@@ -1,0 +1,29 @@
+.details {
+  &[open] .details__summary::after {
+    transform: rotate(-180deg);
+  }
+  &[open] .details__info {
+    display: block;
+    margin-top: 0.8em;
+    transition: display 0.2s;
+  }
+}
+.details__summary {
+  width: fit-content;
+  border-bottom: 1px dashed $black;
+  cursor: pointer;
+  position: relative;
+  &:hover {
+    border-bottom: 1px dashed $white;
+  }
+  &::marker {
+    content: '';
+  }
+  &:after {
+    display: inline-block;
+    margin-left: 0.25em;
+    content: '▼';
+    font-size: 0.8em;
+    transition: transform 0.2s;
+  }
+}

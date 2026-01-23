@@ -1,0 +1,8 @@
+.numbered-list {
+  margin-left: 1.25em;
+  list-style: decimal outside none;
+  & > * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

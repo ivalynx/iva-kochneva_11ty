@@ -1,0 +1,8 @@
+.bullet-list {
+  margin-left: 1.25em;
+  list-style: circle outside none;
+  & > * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

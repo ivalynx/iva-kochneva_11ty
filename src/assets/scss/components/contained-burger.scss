@@ -1,0 +1,7 @@
+.contained-burger {
+  @include for-size(devices) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

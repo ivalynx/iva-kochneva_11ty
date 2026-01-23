@@ -1,0 +1,21 @@
+@use './components/header';
+@use './components/footer';
+
+@use './components/logotype.scss';
+@use './components/nav-menu.scss';
+@use './components/contained-burger.scss';
+@use './components/burger-button.scss';
+@use './components/burger-menu.scss';
+@use './components/about-me';
+@use './components/contacts';
+@use './components/contacts-item.scss';
+@use './components/textWithImageOnBackground.scss';
+@use './components/bgLinenTransparent.scss';
+
+@use './components/visually-hidden';
+@use './components/title';
+@use './components/details';
+@use './components/list-define';
+@use './components/list.scss';
+@use './components/bullet-list.scss';
+@use './components/numbered-list.scss';

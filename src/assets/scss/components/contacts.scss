@@ -1,0 +1,8 @@
+.contacts {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 1.25rem;
+  dd, dt {
+    margin-bottom: 0;
+  }
+}

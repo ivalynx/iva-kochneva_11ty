@@ -1,0 +1,25 @@
+.textWithImageOnBackground {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  position: relative;
+  overflow: hidden;
+  .ImageOnBackground {
+    grid-row: 1;
+    grid-column: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    img {
+      position: relative;
+      height: 100%;
+    }
+  }
+  & > .text {
+    grid-row: 1;
+    grid-column: 1;
+    justify-self: center;
+  }
+}

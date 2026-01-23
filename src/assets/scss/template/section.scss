@@ -1,0 +1,15 @@
+.section {    
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  @include for-size(devices) {  
+    padding: 0 1em;
+  }
+  @include for-size(laptop) {
+    padding: 0 1em;
+  }
+  @include for-size(desktop) {
+    width: calc($laptop - 17px);
+    padding: 0;
+  }
+}

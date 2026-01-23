@@ -1,0 +1,8 @@
+.page {
+  @include for-size(devices) {
+    padding-top: 10px;
+  }
+  @include for-size(laptop) {
+    padding-top: 40px;
+  }
+}
