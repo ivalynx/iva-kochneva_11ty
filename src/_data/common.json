@@ -1,1 +1,6 @@
 # (Опционально) Общие данные для всего сайта
+
+{
+  "layout": "pages/base-content.njk",
+  "custom_global_css": "/assets/css/main.css",
+}
