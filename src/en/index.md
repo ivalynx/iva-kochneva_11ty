@@ -1,7 +1,7 @@
 ---
 layout: pages/index.njk
-lang: bg
-alt_ivaPhoto: "Портрет на Ива Кочнева в цял ръст. Жената на средна възраст гледа директно към зрителя: има късо подстригана тъмнокестенява коса, кафяви очи и леко загоряла кожа. Носи син суитшърт с дизайн на рис; в кадъра се вижда само горната част на изображението, включително ушите и челото на животното."
+lang: en
+alt_ivaPhoto: "A full-face portrait of Iva Kochneva. The middle-aged woman looks directly at the viewer: she has dark brown hair cut short, brown eyes, and slightly tanned skin. She is wearing a blue sweatshirt with a lynx design; only the upper portion of the image, including the animal's ears and forehead, is visible in the frame."
 ---
 
 Привет! Меня зовут Ива Кочнева. Разбираю общее на&nbsp;детали и&nbsp;собираю из&nbsp;деталей общее.
