@@ -1,10 +1,12 @@
 {
-  "layout": "pages/base-content.njk",
   "lang": "ru",
   "footer_text": "© 2024 Мое Портфолио",
   "contact_info": "Пишите мне на почту@example.com",
   "privacy_policy_text": "Политика конфиденциальности",
   "privacy_policy_link": "/ru/privacy/",
   "view_project_label": "Смотреть проект",
-  "custom_global_css": "/assets/css/main.css"
+  "logotype_description": "Логотип, изображающий морду европейской рыси",
+  "my_name": "Ива Кочнева",
+  "title": "Ива Кочнева | IvaLynx",
+  "description": "Персональный сайт Ивы Кочневой"
 }
