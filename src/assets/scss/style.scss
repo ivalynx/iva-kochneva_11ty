@@ -1,29 +1,5 @@
 @use './variables';
-
-@mixin for-size($range) {
-  @if $range == small-phone {
-    @media screen and (max-width: $small-phone) { @content; }
-  } @else if $range == phone {
-    @media screen and (max-width: $phone) { @content; }
-  } @else if $range == tablet {
-    @media screen and (min-width: #{$phone + 1}) and (max-width: $tablet) { @content; }
-  } @else if $range == laptop {
-    @media screen and (min-width: #{$tablet + 1}) { @content; }
-  } @else if $range == desktop {
-    @media screen and (min-width: #{$laptop + 1}) { @content; }
-  } @else if $range == XLscreen {
-    @media screen and (min-width: #{$desktop + 1}) { @content; }
-  } @else if $range == devices {
-    @media screen and (max-width: $tablet) { @content; }
-  } 
-}
-
-// использование
-.my-box {  
-  @include for-size(desktop) {
-  }
-}
-
+@use './mixin.sass';
 @use './reset';
 @use './template';
 @use './pageComponents';
