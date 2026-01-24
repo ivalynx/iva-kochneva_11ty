@@ -22,6 +22,7 @@ export default function(eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy({ "src/assets/favicon": "/" });
+  eleventyConfig.ignores.add("src/assets/scss/");
 
   return {
     dir: {
