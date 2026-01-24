@@ -1,21 +1,26 @@
-const { EleventyI18nPlugin } = require("@11ty/eleventy");
+import { EleventyI18nPlugin } from "@11ty/eleventy";
+import fs from "node:fs"; // Правильный импорт для файловой системы в ESM
 
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig) {
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
-    defaultLanguage: "bg",
-    errorMode: "allow-fallback" // Если перевод отсутствует, можно показать дефолтную страницу
+    defaultLanguage: "bg", // Основной язык (в корне)
+    errorMode: "allow-fallback",
   });
+
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: function(err, bs) {
-        const content_404 = require('fs').readFileSync('_site/404.html');
-        bs.addMiddleware("*", (req, res) => {
-          res.write(content_404);
-          res.end();
-        });
+        if (fs.existsSync('_site/404.html')) {
+          const content_404 = fs.readFileSync('_site/404.html');
+          bs.addMiddleware("*", (req, res) => {
+            res.write(content_404);
+            res.end();
+          });
+        }
       }
     }
   });
+
   eleventyConfig.addPassthroughCopy({ "src/assets/favicon": "/" });
 
   return {
