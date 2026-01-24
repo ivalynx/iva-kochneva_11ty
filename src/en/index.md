@@ -1,5 +1,6 @@
 ---
 layout: pages/index.njk
+translationKey: "home"
 lang: en
 alt_ivaPhoto: "A full-face portrait of Iva Kochneva. The middle-aged woman looks directly at the viewer: she has dark brown hair cut short, brown eyes, and slightly tanned skin. She is wearing a blue sweatshirt with a lynx design; only the upper portion of the image, including the animal's ears and forehead, is visible in the frame."
 ---
