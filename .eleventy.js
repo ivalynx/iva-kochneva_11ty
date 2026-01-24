@@ -28,7 +28,8 @@ export default function(eleventyConfig) {
     dir: {
       input: "src",
       output: "_site",
-      includes: "_includes"
+      includes: "_includes",
+      data: "_data"
     },
     templateFormats: ["md", "njk", "html"],
     markdownTemplateEngine: "njk",
