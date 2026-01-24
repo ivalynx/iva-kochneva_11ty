@@ -29,6 +29,9 @@ export default function(eleventyConfig) {
       input: "src",
       output: "_site",
       includes: "_includes"
-    }
+    },
+    templateFormats: ["md", "njk", "html"],
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk"
   };
 };
