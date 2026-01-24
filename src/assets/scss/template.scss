@@ -5,5 +5,5 @@ body {
   background-repeat: repeat;
 }
 
-@use './template/container.scss';
-@use './template/section.scss';
+@import './template/container.scss';
+@import './template/section.scss';
