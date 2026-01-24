@@ -1,5 +1,5 @@
-@use './variables';
-@use './mixin.sass';
-@use './reset';
-@use './template';
-@use './pageComponents';
+@import './variables';
+@import './mixin';
+@import './reset';
+@import './template';
+@import './pageComponents';
