@@ -3,8 +3,8 @@ layout: base.njk
 ---
 
 <article class="container__item section about-me" id="about">
-    <img src="/assets/img/photo-Iva.jpg" srcset="img/photo-Iva@0.5x.jpg 240w, img/photo-Iva@2x.jpg 2x, img/photo-Iva@3x.jpg 3x" alt="{{ alt_ivaPhoto}}" class="about-me__photo">
-    <div class="about-me__text">
-        {{ content | safe }}
-    </div>
+  <img eleventy:formats="webp" src="/assets/img/Iva Kochneva-bg-transparent.png" alt="{{ alt_ivaPhoto}}" class="about-me__photo">
+  <div class="about-me__text">
+    {{ content | safe }}
+  </div>
 </article>
