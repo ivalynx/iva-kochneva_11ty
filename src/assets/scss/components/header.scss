@@ -1,0 +1,25 @@
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+    "logo locales"
+    "nav  nav";
+  gap: 1rem;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  & .logotype {
+    grid-area: logo;
+  }
+  & .lang-switcher {
+    grid-area: locales;
+    justify-self: end;
+  }
+  & .main-menu {
+    grid-area: nav;
+    width: 100%;
+  }
+}
