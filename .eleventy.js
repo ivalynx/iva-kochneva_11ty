@@ -1,5 +1,6 @@
 import { EleventyI18nPlugin } from "@11ty/eleventy";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import fs from "node:fs"; // Правильный импорт для файловой системы в ESM
 
 export default function(eleventyConfig) {
@@ -20,6 +21,8 @@ export default function(eleventyConfig) {
       decoding: "async",
     },
   });
+
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
