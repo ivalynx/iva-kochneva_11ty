@@ -9,6 +9,9 @@
     background-color: transparent;
     border: none;
   }
+  @include for-size(desktop) {
+    display: none;
+  }
 }
 
 @include for-size(devices){
