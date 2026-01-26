@@ -37,13 +37,30 @@
       </nav>
     </div>
 
+{% macro renderNavListItem(entry) %}
+<li class="main-menu__item{% if entry.url == page.url %} current{% endif %}">
+  <a href="{{ entry.url }}">{{ entry.title }}</a>
+  {% if entry.children.length %}
+  <ul>
+    {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
+  </ul>
+  {% endif %}
+</li>
+{% endmacro %}
+
+{% set navPages = collections.all | eleventyNavigation %}
     <nav class="section main-menu">
       <ul>
-        <li class="main-menu__item"><a href="{{ "/" | locale_url }}">Главная</a></li>
-
+        {%- for entry in navPages %}
+          {% if entry.url.startsWith("/" + page.lang + "/") or (page.lang == "bg" and not entry.url.startsWith("/en/") and not entry.url.startsWith("/ru/")) %}
+            {{ renderNavListItem(entry) }}
+          {% endif %}
+        {%- endfor -%}
       </ul>
 
     </nav>
 </header>
 
-<!-- Если названия файлов будут разными, плагину потребуется дополнительная подсказка в Front Matter через переменную translationKey, но при одинаковых именах всё работает «из коробки». -->
+<p>
+  {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+</p>
