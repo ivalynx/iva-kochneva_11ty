@@ -1,6 +1,6 @@
 ---
 layout: pages/websites.njk
-lang: ru
+lang: en
 translationKey: "websites"
 title: "Мои веб-сайты"
 page_title: "Разработка веб-сайтов"

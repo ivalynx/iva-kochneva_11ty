@@ -1,6 +1,7 @@
 ---
 layout: pages/websites.njk
 lang: bg
+translationKey: "websites"
 eleventyNavigation:
   key: Websites
 title: "Моите уебсайтове"
