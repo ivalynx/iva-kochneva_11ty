@@ -1,6 +1,8 @@
 ---
 layout: pages/websites.njk
 lang: bg
+eleventyNavigation:
+  key: Websites
 title: "Моите уебсайтове"
 page_title: "Разработка на уебсайтове"
 intro_text: "Списък с проекти, по които съм работил."
