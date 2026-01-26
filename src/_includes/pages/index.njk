@@ -8,3 +8,22 @@ layout: base.njk
     {{ content | safe }}
   </div>
 </article>
+
+<article class="container__item section">
+{% macro renderNavListItem(entry) %}
+<li class="main-menu__item{% if entry.url == page.url %} current{% endif %}">
+  <a href="{{ entry.url }}">{{ entry.title }}</a>
+</li>
+{% endmacro %}
+
+{{ you_can_see_my_things }}
+{% set navPages = collections.all | eleventyNavigation %}
+
+  <ul>
+    {%- for entry in navPages %}
+      {% if entry.url.startsWith("/" + page.lang + "/") or (page.lang == "bg" and not entry.url.startsWith("/en/") and not entry.url.startsWith("/ru/")) %}
+        {{ renderNavListItem(entry) }}
+      {% endif %}
+    {%- endfor -%}
+  </ul>
+</article>
