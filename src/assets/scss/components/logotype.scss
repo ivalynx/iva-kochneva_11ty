@@ -1,6 +1,7 @@
 .logotype {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 .logotype__img {
   flex-shrink: 1;
@@ -8,7 +9,7 @@
   height: 102px;
   margin-right: 28px;
   @include for-size(small-phone) {
-    display: none;
+    // display: none;
   }
 }
 .logotype__text {
