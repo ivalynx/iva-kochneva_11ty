@@ -1,10 +1,24 @@
 import { EleventyI18nPlugin } from "@11ty/eleventy";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import fs from "node:fs"; // Правильный импорт для файловой системы в ESM
 
 export default function(eleventyConfig) {
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: "bg", // Основной язык (в корне)
     errorMode: "allow-fallback",
+  });
+  
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    htmlOptions: {
+    baseDir: "src" // корень для путей со слэшем — это папка src
+    },
+    extensions: "html",
+    urlPath: "/img/", 
+    outputDir: "./_site/img/",
+    defaultAttributes: {
+      loading: "lazy",
+      decoding: "async",
+    },
   });
 
   eleventyConfig.setBrowserSyncConfig({
