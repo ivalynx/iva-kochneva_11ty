@@ -26,7 +26,7 @@ $secondaryText: gray; /* Более блеклый (серый) для подп�
 $disabled: darkgray; /* Совсем светлый для неактивных кнопок или подсказок в полях ввода */
 
 /* Fonts */
-$titleFontFamily: 'Roboto Slab', "Palatino Linotype", "Georgia", "Garamond", "Bookman Old Style", serif;
+$titleFontFamily: 'Roboto Slab',"Roboto", "Palatino Linotype", "Georgia", "Garamond", "Bookman Old Style", "Arial", serif;
 $fontSizeLogo: 1.8em;
 $fontSizeTitle2: 1.4em;
 $fontSizeTitle3: 1.2em;
@@ -41,3 +41,6 @@ $phone: 480px;
 $tablet: 768px;
 $laptop: 1024px;
 $desktop: 1200px;
+
+/* */
+$transition-speed: 0.2s;
