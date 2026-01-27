@@ -1,0 +1,99 @@
+.lang-switcher {
+  position: relative;
+  display: inline-block;
+  font-family: inherit;
+
+  &__details {
+    &[open] {
+      .lang-switcher__arrow {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    list-style: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: $primaryText;
+    background: $background;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    transition: background $transition-speed ease;
+    user-select: none;
+
+    &:hover {
+      background: $backgroundHover;
+    }
+
+    // Убираем стандартные маркеры браузеров
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &__arrow {
+    font-size: 2em;
+    line-height: 0.5;
+    transition: transform $transition-speed ease;
+    display: inline-block;
+    margin-left: -0.3em;
+    margin-right: -0.3em;
+  }
+
+  &__list {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    min-width: 70px;
+    margin: 0;
+    padding: 4px;
+    list-style: none;
+    background: #fff;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    box-shadow: $shadow;
+    z-index: 100;
+    
+    // Плавное появление через анимацию
+    animation: langFadeIn 0.2s ease-out;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 2px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: $primaryText;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: all $transition-speed;
+
+    &:hover {
+      background: $backgroundHover;
+      color: #000;
+    }
+  }
+}
+
+// Анимация появления
+@keyframes langFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
