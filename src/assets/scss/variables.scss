@@ -24,6 +24,7 @@ $info: lightblue; /* Для справочных сообщений */
 $primaryText: $black; /* Самый контрастный цвет для заголовков и основного чтения */
 $secondaryText: gray; /* Более блеклый (серый) для подписей, дат и пояснений */
 $disabled: darkgray; /* Совсем светлый для неактивных кнопок или подсказок в полях ввода */
+$shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
 /* Fonts */
 $titleFontFamily: 'Roboto Slab',"Roboto", "Palatino Linotype", "Georgia", "Garamond", "Bookman Old Style", "Arial", serif;
