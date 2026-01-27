@@ -10,23 +10,37 @@
     </h1>
   </a>
   <nav class="lang-switcher">        
-    <ul>
-      <li class="lang-switcher__item">
-          <a href="{{ page.url | locale_url('bg') }}" 
-              class="{% if lang == 'bg' %}active{% endif %}"
-              lang="bg">BG</a>
-      </li>
-      <li class="lang-switcher__item">
-          <a href="{{ page.url | locale_url('ru') }}" 
-              class="{% if lang == 'ru' %}active{% endif %}"
-              lang="ru">RU</a>
-      </li>
-      <li class="lang-switcher__item">
-          <a href="{{ page.url | locale_url('en') }}" 
-              class="{% if lang == 'en' %}active{% endif %}"
-              lang="en">EN</a>
-      </li>
-    </ul>
+    <details class="lang-switcher__details">
+      <summary class="lang-switcher__summary">
+        {{ page.lang | upper }}
+        <span class="lang-switcher__arrow" aria-hidden="true">▾</span>
+      </summary>
+      <ul class="lang-switcher__list">
+        {# Прямая логика через if без использования проблемного массива #}
+        {% if page.lang == "ru" %}
+        <li class="lang-switcher__item">
+          <a href="/" class="lang-switcher__link">BG</a>
+        </li>
+        <li class="lang-switcher__item">
+          <a href="/en/" class="lang-switcher__link">EN</a>
+        </li>
+        {% elseif page.lang == "en" %}
+        <li class="lang-switcher__item">
+          <a href="/" class="lang-switcher__link">BG</a>
+        </li>
+        <li class="lang-switcher__item">
+            <a href="/" class="lang-switcher__link">RU</a>
+        </li>
+        {% elseif page.lang == "bg" %}
+        <li class="lang-switcher__item">
+          <a href="/en/" class="lang-switcher__link">EN</a>
+        </li>
+        <li class="lang-switcher__item">
+            <a href="/" class="lang-switcher__link">RU</a>
+        </li>
+        {% endif %}
+      </ul>
+    </details>
   </nav>
 
 {% macro renderNavListItem(entry) %}
