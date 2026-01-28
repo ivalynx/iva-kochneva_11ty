@@ -57,14 +57,15 @@ layout: base.njk
 <article class="container__item section" id="portfolio">
   <h2 class="title title_2">{{ portfolio_title }}</h2>
   <dl class="gallery">
-    {% for entry in advantages_block.items %}
+    {% for entry in portfolio %}
       <dt class="gallery__image">
-        {# <img eleventy:formats="webp" src="/assets/img/{{ portfolio.term }}" alt="{{ portfolio.definition }}"> #}
+        {# <img eleventy:formats="webp" src="/assets/img/{{ entry.image }}" alt="{{ entry.title }}"> #}
       </dt>
       <dd class="gallery__title">
-        {{ portfolio.definition }}
-        <a href="websites/{{ portfolio.link }}">{{ more }}</a>
+        {{ entry.title }}
+        <a href="websites/{{ entry.link }}">{{ more }}</a>
       </dd>
     {% endfor %}
   </dl>
 </article>
+debug: {{ more | dump }}
