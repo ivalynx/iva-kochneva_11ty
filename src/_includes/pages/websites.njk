@@ -2,7 +2,7 @@
 layout: base.njk
 ---
 
-<section class="container__item section" id="advantages">
+<article class="container__item section" id="advantages">
   <p>{{ advantages_before }}</p>
   <details class="details">
     <summary class="details__summary">
@@ -16,9 +16,9 @@ layout: base.njk
     </dl>
   </details>
   <p>{{ advantages_after }}</p>
-</section>
+</article>
 
-<section class="container__item section" id="services">
+<article class="container__item section" id="services">
   <h2 class="title title_2">{{ services_before }}</h2>
   
   <dl class="list-define">
@@ -52,21 +52,19 @@ layout: base.njk
       </dd>
     {% endfor %}
   </dl>
-</section>
+</article>
 
-
-
-<article class="websites-page">
-    <h1>{{ page_title }}</h1>
-    <p class="intro">{{ intro_text }}</p>
-    
-    <div class="portfolio-grid">
-        {% for site in sites_list %}
-        <div class="site-card">
-            <h3>{{ site.name }}</h3>
-            <p>{{ site.description }}</p>
-            <a href="{{ site.url }}">{{ view_project_label }}</a>
-        </div>
-        {% endfor %}
-    </div>
+<article class="container__item section" id="portfolio">
+  <h2 class="title title_2">{{ portfolio_title }}</h2>
+  <dl class="gallery">
+    {% for entry in advantages_block.items %}
+      <dt class="gallery__image">
+        {# <img eleventy:formats="webp" src="/assets/img/{{ portfolio.term }}" alt="{{ portfolio.definition }}"> #}
+      </dt>
+      <dd class="gallery__title">
+        {{ portfolio.definition }}
+        <a href="websites/{{ portfolio.link }}">{{ more }}</a>
+      </dd>
+    {% endfor %}
+  </dl>
 </article>
