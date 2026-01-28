@@ -49,13 +49,31 @@ services_list:
   - title: "нарисовать в Figma дизайн сайта;"
     desc: "С 3-5 вариантами адаптации к различным экранам и грамотной вёрсткой, чтоб с макетом было удобно работать другим людям."
 
+portfolio_title: "Портфолио"
+portfolio:
+  - image: "mysite1.png"
+    title: "iva-kochneva.eu на 11ty"
+    link: "mysite/11ty"
+  - image: "uchase.png"
+    title: "Уча.се"
+    link: "uchase"
+  - image: "kovcheg.png"
+    title: "Ковчег"
+    link: "kovcheg"
+  - image: "likekintsugi.png"
+    title: "likekintsugi.com"
+    link: "likekintsugi"
+  - image: "mysite0.png"
+    title: "iva-kochneva.eu"
+    link: "mysite"
+  - image: "framedinbelarus.png"
+    title: "framedinbelarus.net"
+    link: "framedinbelarus"
+  - image: "vyzyvanka.png"
+    title: "www.vyzyvanka.com"
+    link: "vyzyvanka"
+  - image: "drweb.png"
+    title: "www.drweb.com"
+    link: "drweb"
 
 
-
-# Данные для цикла в шаблоне
-view_project_label: "Вижте проекта"
-sites_list:
-  - name: "Проект 1"
-    description: "Описание на български"
-    url: "https://site1.bg"
----
