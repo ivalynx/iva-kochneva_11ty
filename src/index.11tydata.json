@@ -1,12 +1,7 @@
 {
   "lang": "bg",
   "layout": "base.njk",
-  "logotype_description": "Лого, изобразяващо лицето на европейски рис",
   "my_name": "Ива Кочнева",
   "title": "Ива Кочнева | IvaLynx",
-  "description": "Личен сайт на Ива Кочнева",
-  "you_can_contact_me": "Можете да се свържете с мен",
-  "by_email": "По имейл",
-  "by_telegram": "По Telegram",
-  "by_phone": "По телефон"
+  "description": "Личен сайт на Ива Кочнева"
 }
