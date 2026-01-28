@@ -27,7 +27,7 @@ layout: base.njk
       <dd class="list-define__defines">
         {# Выводим описание, если оно есть #}
         {% if service.desc %}
-          {{ service.desc }}
+          {{ service.desc | safe }}
         {% endif %}
 
         {% if service.services_block %}
@@ -37,13 +37,12 @@ layout: base.njk
             </summary>
             <dl class="details__info list-define">
               {% for entry in service.services_block.items %}
-                <dt class="list-define__term">{{ entry.term }}</dt>
-                
+                <dt class="list-define__term">{{ entry.term }}</dt>                
                 {% if entry.definition | is_string %}
-                  <dd class="list-define__defines">{{ entry.definition }}</dd>
+                  <dd class="list-define__defines">{{ entry.definition | safe }}</dd>
                 {% else %}
                   {% for desc in entry.definition %}
-                    <dd class="list-define__defines">{{ desc }}</dd>
+                    <dd class="list-define__defines">{{ desc | safe }}</dd>
                   {% endfor %}
                 {% endif %}
               {% endfor %}
@@ -51,8 +50,8 @@ layout: base.njk
           </details>
         {% endif %}
       </dd>
-    {% endfor %} {# Важно: закрываем цикл услуг здесь #}
-  </dl> {# Важно: закрываем внешний список определений здесь #}
+    {% endfor %}
+  </dl>
 </section>
 
 
