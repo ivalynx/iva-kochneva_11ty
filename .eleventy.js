@@ -41,6 +41,10 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/favicon": "/" });
   eleventyConfig.ignores.add("src/assets/scss/");
 
+  eleventyConfig.addFilter("is_string", function(obj) {
+    return typeof obj === 'string';
+  });
+
   return {
     dir: {
       input: "src",
